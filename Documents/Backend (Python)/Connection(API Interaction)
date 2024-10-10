@@ -91,16 +91,6 @@ def handle_login():
     return "Login failed! Invalid username or password."
 
 
-# Fetch dataset from Hugging Face API
-def fetch_huggingface_dataset():
-    url = "https://datasets-server.huggingface.co/rows?dataset=cais%2Fmmlu&config=abstract_algebra&split=test&offset=0&length=100"
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = response.json()
-        return data.get("rows", [])
-    return []
-
-
 # Process dataset and extract questions, choices, and answers
 def process_dataset(rows):
     questions_data = []
@@ -122,22 +112,26 @@ def process_dataset(rows):
 
 # Add the dataset questions to the student's quiz pool
 def add_dataset_questions_to_student(student_name, questions_data):
-    data = load_data()
-    if student_name not in data:
-        return "Student not found."
+    try:
+        data = load_data()
+        if student_name not in data:
+            return "Student not found."
 
-    # Ensure that 'mcqs' field exists for the student
-    if 'mcqs' not in data[student_name]:
-        data[student_name]['mcqs'] = []
+        # Ensure that 'mcqs' field exists for the student
+        if 'mcqs' not in data[student_name]:
+            data[student_name]['mcqs'] = []
 
-    for question_data in questions_data:
-        data[student_name]['mcqs'].append({
-            "question": question_data["question"],
-            "choices": question_data["choices"],
-            "correct": question_data["answer"]
-        })
+        for question_data in questions_data:
+            data[student_name]['mcqs'].append({
+                "question": question_data["question"],
+                "choices": question_data["choices"],
+                "correct": question_data["answer"]
+            })
 
-    save_data(data)
+        save_data(data)
+    except Exception as e:
+        print(f"Error adding questions to student: {e}")  # Log the error
+
 
 
 # Show the quiz page for the logged-in user
