@@ -180,6 +180,24 @@ def handle_quiz():
 
     return f"Thank you for participating, {username}! You scored {score}/{total_questions}! <a href='/login'>Go back to login</a>"
 
+#Get student's information by username
+@app.route('/api/student/<username>', method='GET')
+def get_student_info(username):
+    data = load_data()
+    
+    if username not in data:
+        response.status = 404
+        return {"error": "Student not found"}
+    
+    # Return the student information, excluding sensitive data like passwords
+    student_info = {
+        "username": username,
+        "quiz_scores": data[username]['quiz_scores'],
+        "mcqs_taken": len(data[username]['mcqs'])
+    }
+    
+    return student_info
+
 
 if __name__ == "__main__":
     run(app, host='localhost', port=8080, debug=True)
