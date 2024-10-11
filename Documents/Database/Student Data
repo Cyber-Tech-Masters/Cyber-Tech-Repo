@@ -1,1 +1,167 @@
 Student Dataset details
+Student test page python
+
+# app.py
+import random
+from sqlalchemy import inspect  # Import inspect
+from flask import Flask, request, render_template
+import pandas as pd
+import re
+from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///student.db'
+db = SQLAlchemy(app)
+
+class Student(db.Model):
+    student_id = db.Column(db.Integer, primary_key=True)
+    score = db.Column(db.Integer, nullable=False)
+    timestamp = db.Column(db.DateTime, nullable=False)
+    feedback = db.Column(db.String, nullable=True)
+
+# Load the DataFrame with questions and answers
+df = pd.read_csv('C:\\Users\\baloy\\Downloads\\ds\\train.csv')
+
+@app.route('/')
+def index():
+    problem = df['problem'].tolist()
+    limited_problems = random.sample(problem, 30)
+    return render_template('Test.html', problem= limited_problems)
+
+@app.template_filter('latex_to_text')
+def latex_to_text(text):
+    # Remove LaTeX code
+    text = re.sub(r'\\[a-zA-Z]+', '', text)
+    # Remove dollar signs
+    text = re.sub(r'\$', '', text)
+    return text
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    student_id = request.cookies.get('student_id')
+    timestamp = datetime.now()
+    score = 0
+
+
+    # Save the data to the database
+    try:
+        new_student = Student(student_id=student_id,
+                              score=0 ,
+                              timestamp=timestamp
+                              )
+        db.session.add(new_student)
+        db.session.commit()
+        print("Data saved to database successfully!")
+    except Exception as e:
+        print(f"Error saving data to database: {e}")
+        db.session.rollback()
+
+
+    answers = request.form.to_dict()
+    feedback = []
+    for ans_index, answer in answers.items():
+        if ans_index.startswith('answer_'):
+            ans_index_num = int(ans_index.replace('answer_', '')) - 1
+            correct_answer = None
+            if ans_index_num in df.index:
+                correct_answer = df.loc[ans_index_num, 'answer']
+            if correct_answer is not None:
+                if answer == correct_answer:
+                     score += 1
+                     feedback.append(f'Correct! The answer is {correct_answer}.')
+                else:
+                    feedback.append(f'Incorrect. The correct answer is {correct_answer}.')
+            else:
+                feedback.append(f'Error: Unable to find correct answer for question {ans_index_num}.')
+
+    print("Feedback:", feedback)
+    print("Score:", score)
+
+
+    try:
+        new_student = Student.query.filter_by(student_id=student_id).first()
+        new_student.score = score
+        new_student.feedback = '\n'.join(feedback)
+        db.session.commit()
+        print("Score updated successfully!")
+    except Exception as e:
+        print(f"Error updating score: {e}")
+        db.session.rollback()
+
+    # Render the feedback template with the score and feedback
+    print("Rendering feedback template with score =", score, "and feedback =", feedback)
+    return render_template('feedback.html', score=score, feedback=feedback)
+
+if __name__ == '__main__':
+    with app.app_context():
+        # Use inspect() to check for the table
+        inspector = inspect(db.engine)
+        if not inspector.has_table("students"):
+            db.create_all()
+    app.run(debug=True)
+
+Html
+<!-- feedback.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback</title>
+  </head>
+  <body>
+    <h1>Feedback</h1>
+    <p>Your score is: {{ score }}.</p>
+    <ul>
+      {% for item in feedback %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Test Page</h1>
+    <form action="/submit" method="POST">
+      <input type="hidden" name="score" value="0"> <div id="question-container">
+      {% for problem in problem %}
+        <p>{{ problem | latex_to_text | safe }}</p>
+        <input type="text" name="answer_{{ loop.index }}">
+      {% endfor %}
+      <input type="submit" value="Submit">
+    </div>
+    </form>
+  <script>
+      const scoreInput = document.querySelector('input[name="score"]');
+    </script>
+  </body>
+</html>
+
+Sqlite
+
+from sqlalchemy import create_engine, text
+
+engine = create_engine('sqlite:///student.db')
+conn = engine.connect()
+
+conn.execute(text('''
+    CREATE TABLE students (
+        student_id INTEGER PRIMARY KEY,
+        score INTEGER NOT NULL
+        timestamp DATETIME NOT NULL 
+        
+        ALTER TABLE students
+         ADD COLUMN feedback TEXT 
+'''))
+
+
+# Close the database connection
+conn.close()
+conn.commit()
+conn.close()
