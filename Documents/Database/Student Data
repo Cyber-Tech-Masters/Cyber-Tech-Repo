@@ -100,3 +100,68 @@ if __name__ == '__main__':
         if not inspector.has_table("students"):
             db.create_all()
     app.run(debug=True)
+
+Html
+<!-- feedback.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback</title>
+  </head>
+  <body>
+    <h1>Feedback</h1>
+    <p>Your score is: {{ score }}.</p>
+    <ul>
+      {% for item in feedback %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <h1>Test Page</h1>
+    <form action="/submit" method="POST">
+      <input type="hidden" name="score" value="0"> <div id="question-container">
+      {% for problem in problem %}
+        <p>{{ problem | latex_to_text | safe }}</p>
+        <input type="text" name="answer_{{ loop.index }}">
+      {% endfor %}
+      <input type="submit" value="Submit">
+    </div>
+    </form>
+  <script>
+      const scoreInput = document.querySelector('input[name="score"]');
+    </script>
+  </body>
+</html>
+
+Sqlite
+
+from sqlalchemy import create_engine, text
+
+engine = create_engine('sqlite:///student.db')
+conn = engine.connect()
+
+conn.execute(text('''
+    CREATE TABLE students (
+        student_id INTEGER PRIMARY KEY,
+        score INTEGER NOT NULL
+        timestamp DATETIME NOT NULL 
+        
+        ALTER TABLE students
+         ADD COLUMN feedback TEXT 
+'''))
+
+
+# Close the database connection
+conn.close()
+conn.commit()
+conn.close()
