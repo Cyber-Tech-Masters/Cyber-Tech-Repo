@@ -198,6 +198,18 @@ def get_student_info(username):
     
     return student_info
 
+# Get a student's quiz results
+@app.route('/api/student/<username>/results', method='GET')
+def get_student_results(username):
+    data = load_data()
+    
+    if username not in data:
+        response.status = 404
+        return {"error": "Student not found"}
+    
+    quiz_scores = data[username].get('quiz_scores', [])
+    
+    return {"username": username, "quiz_scores": quiz_scores}
 
 if __name__ == "__main__":
     run(app, host='localhost', port=8080, debug=True)
