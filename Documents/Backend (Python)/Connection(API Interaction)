@@ -4,24 +4,6 @@ import requests
 
 app = Bottle()
 
-
-# Load or create dataset.json to store student data
-def load_data():
-    try:
-        with open("dataset.json", "r") as file:
-            # Check if the file is empty
-            if file.readable():
-                file.seek(0)  # Move back to the start of the file
-                content = file.read().strip()  # Read and strip whitespace
-                if not content:  # Check for empty content
-                    return {}
-                return json.loads(content)  # Load the JSON data
-            else:
-                return {}
-    except (FileNotFoundError, json.JSONDecodeError):
-        return {}  # Return an empty dict if the file is not found or JSON is invalid
-
-
 def save_data(data):
     with open("dataset.json", "w") as file:
         json.dump(data, file)
