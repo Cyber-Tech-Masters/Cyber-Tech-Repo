@@ -215,5 +215,146 @@
         "options": ["4√2 cm", "8 cm", "2√2 cm", "10 cm"],
         "answer": "4√2 cm",
         "solution": "Diagonal = side√2 = 4√2 cm."
+    },
+    {
+        "problem": "What is the volume of a cone with a radius of 3 cm and height of 9 cm?",
+        "type": "Geometry",
+        "options": ["27π cm³", "36π cm³", "45π cm³", "54π cm³"],
+        "answer": "27π cm³",
+        "solution": "Volume = (1/3)πr²h = (1/3)π * 3² * 9 = 27π cm³."
+    },
+    {
+        "problem": "What is the sum of the exterior angles of a polygon?",
+        "type": "Geometry",
+        "options": ["360°", "180°", "720°", "90°"],
+        "answer": "360°",
+        "solution": "The sum of the exterior angles of any polygon is always 360°."
+    },
+    {
+        "problem": "What is the length of a side of a regular hexagon with a perimeter of 48 cm?",
+        "type": "Geometry",
+        "options": ["6 cm", "8 cm", "10 cm", "12 cm"],
+        "answer": "8 cm",
+        "solution": "A hexagon has 6 sides, so the length of each side is 48/6 = 8 cm."
+    },
+    {
+        "problem": "What is the measure of each interior angle of a regular octagon?",
+        "type": "Geometry",
+        "options": ["135°", "140°", "150°", "120°"],
+        "answer": "135°",
+        "solution": "Each interior angle of a regular octagon is calculated as (n-2) * 180° / n = (8-2) * 180° / 8 = 135°."
+    },
+    {
+        "problem": "How many diagonals does a pentagon have?",
+        "type": "Geometry",
+        "options": ["5", "7", "10", "12"],
+        "answer": "5",
+        "solution": "The number of diagonals in a polygon is given by n(n-3)/2, where n is the number of sides. For a pentagon, n = 5, so the number of diagonals is 5(5-3)/2 = 5."
+    },
+    {
+        "problem": "What is the lateral surface area of a cylinder with radius 4 cm and height 10 cm?",
+        "type": "Geometry",
+        "options": ["80π cm²", "40π cm²", "100π cm²", "60π cm²"],
+        "answer": "80π cm²",
+        "solution": "Lateral surface area = 2πrh = 2π * 4 * 10 = 80π cm²."
+    },
+    {
+        "problem": "What is the area of an equilateral triangle with a side length of 6 cm?",
+        "type": "Geometry",
+        "options": ["9√3 cm²", "12√3 cm²", "15√3 cm²", "18√3 cm²"],
+        "answer": "9√3 cm²",
+        "solution": "Area = (√3/4) * side² = (√3/4) * 6² = 9√3 cm²."
+    },
+    {
+        "problem": "What is the measure of each exterior angle of a regular decagon?",
+        "type": "Geometry",
+        "options": ["36°", "45°", "30°", "60°"],
+        "answer": "36°",
+        "solution": "Exterior angle = 360/n = 360/10 = 36°."
+    },
+    {
+        "problem": "What is the area of a kite with diagonals measuring 6 cm and 8 cm?",
+        "type": "Geometry",
+        "options": ["24 cm²", "30 cm²", "36 cm²", "48 cm²"],
+        "answer": "24 cm²",
+        "solution": "Area = 1/2 * d1 * d2 = 1/2 * 6 * 8 = 24 cm²."
+    },
+    {
+        "problem": "What is the perimeter of a regular pentagon with each side measuring 7 cm?",
+        "type": "Geometry",
+        "options": ["35 cm", "30 cm", "28 cm", "25 cm"],
+        "answer": "35 cm",
+        "solution": "Perimeter = number of sides * length of each side = 5 * 7 = 35 cm."
+    },
+    {
+        "problem": "How many faces does a dodecahedron have?",
+        "type": "Geometry",
+        "options": ["10", "12", "20", "8"],
+        "answer": "12",
+        "solution": "A dodecahedron is a polyhedron with 12 pentagonal faces."
+    },
+    {
+        "problem": "What is the volume of a rectangular prism with length 4 cm, width 3 cm, and height 5 cm?",
+        "type": "Geometry",
+        "options": ["60 cm³", "55 cm³", "45 cm³", "50 cm³"],
+        "answer": "60 cm³",
+        "solution": "Volume = length * width * height = 4 * 3 * 5 = 60 cm³."
+    },
+    {
+        "problem": "What is the sum of the interior angles of a hexagon?",
+        "type": "Geometry",
+        "options": ["540°", "720°", "360°", "900°"],
+        "answer": "720°",
+        "solution": "The sum of the interior angles of a polygon is given by (n-2) * 180°, where n is the number of sides. For a hexagon, n = 6, so the sum is (6-2) * 180° = 720°."
+    },
+    {
+        "problem": "What is the surface area of a sphere with radius 4 cm?",
+        "type": "Geometry",
+        "options": ["32π cm²", "48π cm²", "64π cm²", "80π cm²"],
+        "answer": "64π cm²",
+        "solution": "Surface area = 4πr² = 4π * 4² = 64π cm²."
+    },
+    {
+        "problem": "What is the length of a chord of a circle with radius 5 cm and a perpendicular distance of 4 cm from the center?",
+        "type": "Geometry",
+        "options": ["6 cm", "7 cm", "8 cm", "9 cm"],
+        "answer": "6 cm",
+        "solution": "Using the Pythagorean theorem: (1/2 chord length)² + 4² = 5², solving gives chord length = 6 cm."
+    },
+    {
+        "problem": "What is the area of a semicircle with a diameter of 10 cm?",
+        "type": "Geometry",
+        "options": ["25π cm²", "50π cm²", "12.5π cm²", "15π cm²"],
+        "answer": "25π cm²",
+        "solution": "Area = (1/2)πr² = (1/2)π * (10/2)² = 25π cm²."
+    },
+    {
+        "problem": "What is the perimeter of an equilateral triangle with side length 5 cm?",
+        "type": "Geometry",
+        "options": ["10 cm", "15 cm", "20 cm", "25 cm"],
+        "answer": "15 cm",
+        "solution": "Perimeter = 3 * side length = 3 * 5 = 15 cm."
+    },
+    {
+        "problem": "How many vertices does an icosahedron have?",
+        "type": "Geometry",
+        "options": ["12", "20", "30", "10"],
+        "answer": "12",
+        "solution": "An icosahedron has 12 vertices."
+    },
+    {
+        "problem": "What is the total surface area of a rectangular prism with dimensions 3 cm, 4 cm, and 5 cm?",
+        "type": "Geometry",
+        "options": ["94 cm²", "80 cm²", "62 cm²", "74 cm²"],
+        "answer": "94 cm²",
+        "solution": "Surface area = 2(lw + lh + wh) = 2(3*4 + 3*5 + 4*5) = 94 cm²."
+    },
+    {
+        "problem": "What is the volume of a pyramid with a square base of side length 4 cm and height of 9 cm?",
+        "type": "Geometry",
+        "options": ["32 cm³", "48 cm³", "60 cm³", "64 cm³"],
+        "answer": "48 cm³",
+        "solution": "Volume = (1/3) * base area * height = (1/3) * 4² * 9 = 48 cm³."
     }
 ]
+
