@@ -1,359 +1,359 @@
 [
     {
-        "problem": "What is the area of a triangle with base 10 cm and height 5 cm?",
-        "type": "Geometry",
-        "options": ["25 cm²", "50 cm²", "15 cm²", "20 cm²"],
-        "answer": "25 cm²",
-        "solution": "Area = 1/2 * base * height = 1/2 * 10 * 5 = 25 cm²."
+        "problem": "What is the probability of flipping a coin and getting heads?",
+        "type": "Probability",
+        "options": ["1/2", "1/3", "1/4", "1/5"],
+        "answer": "1/2",
+        "solution": "A fair coin has two sides, so the probability of getting heads is 1 out of 2, or 1/2."
     },
     {
-        "problem": "What is the circumference of a circle with radius 7 cm?",
-        "type": "Geometry",
-        "options": ["21 cm", "14 cm", "43.96 cm", "49 cm"],
-        "answer": "43.96 cm",
-        "solution": "Circumference = 2 * π * r ≈ 2 * 3.14 * 7 = 43.96 cm."
+        "problem": "If you roll a six-sided die, what is the probability of rolling a number greater than 4?",
+        "type": "Probability",
+        "options": ["1/3", "1/2", "2/3", "1/6"],
+        "answer": "1/3",
+        "solution": "The outcomes greater than 4 are 5 and 6. There are 2 favorable outcomes out of 6, so the probability is 2/6 = 1/3."
     },
     {
-        "problem": "What is the area of a rectangle with length 8 cm and width 3 cm?",
-        "type": "Geometry",
-        "options": ["24 cm²", "11 cm²", "26 cm²", "30 cm²"],
-        "answer": "24 cm²",
-        "solution": "Area = length * width = 8 * 3 = 24 cm²."
-    },
-    {
-        "problem": "How many degrees are in a triangle?",
-        "type": "Geometry",
-        "options": ["180", "360", "90", "270"],
-        "answer": "180",
-        "solution": "The sum of the angles in a triangle is always 180 degrees."
-    },
-    {
-        "problem": "What is the volume of a cylinder with radius 3 cm and height 5 cm?",
-        "type": "Geometry",
-        "options": ["45π cm³", "15π cm³", "30π cm³", "50π cm³"],
-        "answer": "45π cm³",
-        "solution": "Volume = πr²h = π * 3² * 5 = 45π cm³."
-    },
-    {
-        "problem": "What is the Pythagorean theorem?",
-        "type": "Geometry",
-        "options": ["a² + b² = c²", "a + b = c", "a - b = c", "ab = c"],
-        "answer": "a² + b² = c²",
-        "solution": "In a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides."
-    },
-    {
-        "problem": "What is the area of a circle with a radius of 4 cm?",
-        "type": "Geometry",
-        "options": ["16π cm²", "8π cm²", "12π cm²", "10π cm²"],
-        "answer": "16π cm²",
-        "solution": "Area = πr² = π * 4² = 16π cm²."
-    },
-    {
-        "problem": "How many sides does a hexagon have?",
-        "type": "Geometry",
-        "options": ["5", "6", "7", "8"],
+        "problem": "In how many ways can you arrange the letters in the word 'CAT'?",
+        "type": "Counting",
+        "options": ["3", "6", "9", "12"],
         "answer": "6",
-        "solution": "A hexagon is defined as a six-sided polygon."
+        "solution": "The number of arrangements is 3! = 3 × 2 × 1 = 6."
     },
     {
-        "problem": "What is the volume of a cube with side length 2 cm?",
-        "type": "Geometry",
-        "options": ["4 cm³", "8 cm³", "16 cm³", "2 cm³"],
-        "answer": "8 cm³",
-        "solution": "Volume = side³ = 2³ = 8 cm³."
+        "problem": "What is the probability of drawing a red card from a standard deck of 52 cards?",
+        "type": "Probability",
+        "options": ["1/2", "1/4", "1/3", "3/4"],
+        "answer": "1/2",
+        "solution": "There are 26 red cards out of 52 in a deck, so the probability is 26/52 = 1/2."
     },
     {
-        "problem": "What is the area of a trapezoid with bases of 5 cm and 7 cm, and height of 4 cm?",
-        "type": "Geometry",
-        "options": ["24 cm²", "30 cm²", "32 cm²", "40 cm²"],
-        "answer": "24 cm²",
-        "solution": "Area = 1/2 * (b1 + b2) * height = 1/2 * (5 + 7) * 4 = 24 cm²."
+        "problem": "How many ways can you choose 2 ice cream flavors from a list of 5 flavors?",
+        "type": "Counting",
+        "options": ["10", "5", "15", "20"],
+        "answer": "10",
+        "solution": "The number of ways to choose 2 out of 5 is given by 5C2 = 5! / (2!(5-2)!) = 10."
     },
     {
-        "problem": "What is the measure of each interior angle of a regular pentagon?",
-        "type": "Geometry",
-        "options": ["108°", "120°", "90°", "135°"],
-        "answer": "108°",
-        "solution": "Each interior angle of a regular pentagon is calculated as (n-2) * 180° / n = (5-2)*180/5."
+        "problem": "What is the probability of rolling an even number on a six-sided die?",
+        "type": "Probability",
+        "options": ["1/2", "1/3", "1/4", "2/3"],
+        "answer": "1/2",
+        "solution": "The even numbers are 2, 4, and 6, so there are 3 favorable outcomes out of 6. The probability is 3/6 = 1/2."
     },
     {
-        "problem": "What is the distance between the points (1, 2) and (4, 6)?",
-        "type": "Geometry",
-        "options": ["5", "7", "3", "4"],
-        "answer": "5",
-        "solution": "Distance = √((x2 - x1)² + (y2 - y1)²) = √((4 - 1)² + (6 - 2)²) = 5."
+        "problem": "In how many ways can you arrange 4 books on a shelf?",
+        "type": "Counting",
+        "options": ["24", "12", "16", "32"],
+        "answer": "24",
+        "solution": "The number of arrangements is 4! = 4 × 3 × 2 × 1 = 24."
     },
     {
-        "problem": "What is the perimeter of a rectangle with length 10 cm and width 4 cm?",
-        "type": "Geometry",
-        "options": ["28 cm", "40 cm", "24 cm", "30 cm"],
-        "answer": "28 cm",
-        "solution": "Perimeter = 2(length + width) = 2(10 + 4) = 28 cm."
+        "problem": "What is the probability of drawing an Ace from a standard deck of 52 cards?",
+        "type": "Probability",
+        "options": ["1/13", "1/4", "1/52", "1/26"],
+        "answer": "1/13",
+        "solution": "There are 4 Aces in a deck of 52 cards, so the probability is 4/52 = 1/13."
     },
     {
-        "problem": "What is the area of a parallelogram with base 6 cm and height 3 cm?",
-        "type": "Geometry",
-        "options": ["18 cm²", "24 cm²", "30 cm²", "36 cm²"],
-        "answer": "18 cm²",
-        "solution": "Area = base * height = 6 * 3 = 18 cm²."
+        "problem": "How many ways can you distribute 3 identical balls into 2 different boxes?",
+        "type": "Counting",
+        "options": ["4", "5", "6", "7"],
+        "answer": "4",
+        "solution": "The different distributions are: (3,0), (2,1), (1,2), and (0,3), giving 4 ways."
     },
     {
-        "problem": "What is the volume of a sphere with radius 3 cm?",
-        "type": "Geometry",
-        "options": ["36π cm³", "27π cm³", "12π cm³", "24π cm³"],
-        "answer": "36π cm³",
-        "solution": "Volume = (4/3)πr³ = (4/3)π * 3³ = 36π cm³."
+        "problem": "What is the probability of drawing a King or a Queen from a deck of 52 cards?",
+        "type": "Probability",
+        "options": ["2/13", "1/13", "3/26", "1/4"],
+        "answer": "2/13",
+        "solution": "There are 4 Kings and 4 Queens in the deck, totaling 8 favorable outcomes. Thus, the probability is 8/52 = 2/13."
     },
     {
-        "problem": "What is the total surface area of a cube with side length 2 cm?",
-        "type": "Geometry",
-        "options": ["12 cm²", "24 cm²", "48 cm²", "36 cm²"],
-        "answer": "24 cm²",
-        "solution": "Total surface area = 6 * side² = 6 * 2² = 24 cm²."
+        "problem": "How many different ways can you form a committee of 3 people from a group of 7?",
+        "type": "Counting",
+        "options": ["21", "35", "28", "24"],
+        "answer": "35",
+        "solution": "The number of ways to choose 3 out of 7 is 7C3 = 7! / (3!(7-3)!) = 35."
     },
     {
-        "problem": "What is the measure of the angles in a right triangle?",
-        "type": "Geometry",
-        "options": ["30°, 60°, 90°", "45°, 45°, 90°", "All angles are 60°", "None"],
-        "answer": "30°, 60°, 90°",
-        "solution": "A right triangle has one angle equal to 90°."
+        "problem": "What is the probability of not rolling a 5 on a six-sided die?",
+        "type": "Probability",
+        "options": ["5/6", "1/6", "4/6", "1/2"],
+        "answer": "5/6",
+        "solution": "There is 1 unfavorable outcome (rolling a 5), so the probability of not rolling a 5 is 5/6."
     },
     {
-        "problem": "How many edges does a cube have?",
-        "type": "Geometry",
-        "options": ["6", "8", "12", "10"],
+        "problem": "How many ways can you arrange the letters in the word 'BOOK'?",
+        "type": "Counting",
+        "options": ["12", "24", "6", "36"],
         "answer": "12",
-        "solution": "A cube has 12 edges."
+        "solution": "The number of unique arrangements is 4!/2! = 24/2 = 12 because the letter 'O' is repeated."
     },
     {
-        "problem": "What is the area of a rhombus with diagonals of 10 cm and 12 cm?",
-        "type": "Geometry",
-        "options": ["60 cm²", "72 cm²", "48 cm²", "36 cm²"],
-        "answer": "60 cm²",
-        "solution": "Area = 1/2 * d1 * d2 = 1/2 * 10 * 12 = 60 cm²."
+        "problem": "What is the probability of drawing a face card from a deck of 52 cards?",
+        "type": "Probability",
+        "options": ["3/13", "1/4", "1/3", "2/13"],
+        "answer": "3/13",
+        "solution": "There are 12 face cards in a deck of 52 cards, so the probability is 12/52 = 3/13."
     },
     {
-        "problem": "What is the sum of the angles of a quadrilateral?",
-        "type": "Geometry",
-        "options": ["360°", "180°", "90°", "270°"],
-        "answer": "360°",
-        "solution": "The sum of the angles in any quadrilateral is always 360 degrees."
+        "problem": "How many different 4-digit PIN codes can be formed using the digits 0-9?",
+        "type": "Counting",
+        "options": ["10,000", "9,000", "5,000", "6,000"],
+        "answer": "10,000",
+        "solution": "Each digit can be one of 10 possibilities, so there are 10 × 10 × 10 × 10 = 10,000 possible combinations."
     },
     {
-        "problem": "What is the length of the diagonal of a rectangle with sides 6 cm and 8 cm?",
-        "type": "Geometry",
-        "options": ["10 cm", "12 cm", "14 cm", "16 cm"],
-        "answer": "10 cm",
-        "solution": "Using the Pythagorean theorem: d = √(6² + 8²) = 10 cm."
+        "problem": "What is the probability of drawing a card that is not a heart from a standard deck?",
+        "type": "Probability",
+        "options": ["3/4", "1/4", "1/2", "2/3"],
+        "answer": "3/4",
+        "solution": "There are 39 cards that are not hearts out of 52, so the probability is 39/52 = 3/4."
     },
     {
-        "problem": "What is the area of a sector of a circle with radius 4 cm and angle 90°?",
-        "type": "Geometry",
-        "options": ["4π cm²", "2π cm²", "8 cm²", "16 cm²"],
-        "answer": "4π cm²",
-        "solution": "Area = (θ/360) * πr² = (90/360) * π * 4² = 4π cm²."
+        "problem": "How many ways can you choose 4 fruits from a basket of 8 different fruits?",
+        "type": "Counting",
+        "options": ["70", "35", "56", "28"],
+        "answer": "70",
+        "solution": "The number of ways to choose 4 out of 8 is 8C4 = 8! / (4!(8-4)!) = 70."
     },
     {
-        "problem": "What is the height of a pyramid with a base area of 20 cm² and volume of 60 cm³?",
-        "type": "Geometry",
-        "options": ["3 cm", "4 cm", "5 cm", "6 cm"],
-        "answer": "6 cm",
-        "solution": "Volume = (1/3) * base area * height, solving for height gives height = 60 / 20 * 3 = 9."
+        "problem": "What is the probability of rolling a prime number on a six-sided die?",
+        "type": "Probability",
+        "options": ["1/2", "1/3", "2/3", "1/6"],
+        "answer": "1/2",
+        "solution": "The prime numbers on a six-sided die are 2, 3, and 5. Thus, there are 3 favorable outcomes, giving a probability of 3/6 = 1/2."
     },
     {
-        "problem": "What is the relationship between the angles of a parallelogram?",
-        "type": "Geometry",
-        "options": ["Adjacent angles are equal", "Opposite angles are equal", "All angles are equal", "None"],
-        "answer": "Opposite angles are equal",
-        "solution": "In a parallelogram, opposite angles are equal."
+        "problem": "How many ways can you distribute 4 different books to 3 students if each student gets at least one book?",
+        "type": "Counting",
+        "options": ["36", "48", "72", "96"],
+        "answer": "36",
+        "solution": "We assign one book to each student in 3! ways and then distribute the last book in 3 ways: 3! × 3 = 36."
     },
     {
-        "problem": "What is the surface area of a cylinder with radius 3 cm and height 5 cm?",
-        "type": "Geometry",
-        "options": ["48π cm²", "30π cm²", "18π cm²", "60π cm²"],
-        "answer": "48π cm²",
-        "solution": "Surface area = 2πr(h + r) = 2π * 3 * (5 + 3) = 48π cm²."
+        "problem": "What is the probability of getting a sum of 7 when rolling two six-sided dice?",
+        "type": "Probability",
+        "options": ["1/6", "1/8", "5/36", "7/36"],
+        "answer": "1/6",
+        "solution": "The outcomes that sum to 7 are (1,6), (2,5), (3,4), (4,3), (5,2), and (6,1), giving 6 favorable outcomes. The probability is 6/36 = 1/6."
     },
     {
-        "problem": "What is the area of a square with side length 5 cm?",
-        "type": "Geometry",
-        "options": ["20 cm²", "25 cm²", "15 cm²", "10 cm²"],
-        "answer": "25 cm²",
-        "solution": "Area = side² = 5² = 25 cm²."
+        "problem": "How many different ways can you arrange the letters in the word 'APPLE'?",
+        "type": "Counting",
+        "options": ["60", "120", "240", "360"],
+        "answer": "60",
+        "solution": "The number of unique arrangements is 5!/2! = 120/2 = 60 because the letter 'P' is repeated."
     },
     {
-        "problem": "What is the height of an equilateral triangle with a side length of 6 cm?",
-        "type": "Geometry",
-        "options": ["4√3 cm", "6√3 cm", "3√3 cm", "2√3 cm"],
-        "answer": "3√3 cm",
-        "solution": "Height = (√3/2) * side = (√3/2) * 6 = 3√3 cm."
+        "problem": "What is the probability of drawing a number card (2-10) from a deck of 52 cards?",
+        "type": "Probability",
+        "options": ["5/13", "4/13", "9/13", "3/13"],
+        "answer": "5/13",
+        "solution": "There are 36 number cards in a deck, so the probability is 36/52 = 9/13."
     },
     {
-        "problem": "What is the angle sum of a triangle?",
-        "type": "Geometry",
-        "options": ["360°", "180°", "90°", "270°"],
-        "answer": "180°",
-        "solution": "The sum of the angles in a triangle is always 180 degrees."
+        "problem": "How many ways can 3 students sit in a row of 5 chairs?",
+        "type": "Counting",
+        "options": ["60", "20", "10", "30"],
+        "answer": "60",
+        "solution": "We choose 3 chairs from 5 (5P3), which gives 5!/(5-3)! = 60."
     },
     {
-        "problem": "What is the area of a right triangle with legs of 6 cm and 8 cm?",
-        "type": "Geometry",
-        "options": ["24 cm²", "36 cm²", "48 cm²", "18 cm²"],
-        "answer": "24 cm²",
-        "solution": "Area = 1/2 * base * height = 1/2 * 6 * 8 = 24 cm²."
+        "problem": "What is the probability of rolling a 4 or 6 on a six-sided die?",
+        "type": "Probability",
+        "options": ["1/3", "1/2", "2/3", "1/6"],
+        "answer": "1/3",
+        "solution": "There are 2 favorable outcomes out of 6 (4 and 6), so the probability is 2/6 = 1/3."
     },
     {
-        "problem": "What is the measure of each exterior angle of a regular hexagon?",
-        "type": "Geometry",
-        "options": ["60°", "120°", "90°", "30°"],
-        "answer": "60°",
-        "solution": "Exterior angle = 360/n = 360/6 = 60°."
+        "problem": "How many ways can you form a 3-digit number using the digits 1, 2, and 3 without repeating any digit?",
+        "type": "Counting",
+        "options": ["6", "9", "12", "24"],
+        "answer": "6",
+        "solution": "The number of ways to form the number is 3! = 3 × 2 × 1 = 6."
     },
     {
-        "problem": "What is the length of the diagonal of a square with side length 4 cm?",
-        "type": "Geometry",
-        "options": ["4√2 cm", "8 cm", "2√2 cm", "10 cm"],
-        "answer": "4√2 cm",
-        "solution": "Diagonal = side√2 = 4√2 cm."
+        "problem": "What is the probability of drawing a black card from a standard deck of 52 cards?",
+        "type": "Probability",
+        "options": ["1/2", "1/4", "1/3", "2/3"],
+        "answer": "1/2",
+        "solution": "There are 26 black cards in a standard deck, so the probability is 26/52 = 1/2."
     },
     {
-        "problem": "What is the perimeter of an equilateral triangle with a side length of 5 cm?",
-        "type": "Geometry",
-        "options": ["10 cm", "15 cm", "20 cm", "25 cm"],
-        "answer": "15 cm",
-        "solution": "Perimeter = 3 * side length = 3 * 5 = 15 cm."
+        "problem": "How many ways can you distribute 5 identical apples among 3 children?",
+        "type": "Counting",
+        "options": ["21", "35", "15", "10"],
+        "answer": "21",
+        "solution": "Using the stars and bars method, the number of ways is given by (5 + 3 - 1)C(3 - 1) = 7C2 = 21."
     },
     {
-        "problem": "What is the area of a triangle with a base of 12 cm and a height of 9 cm?",
-        "type": "Geometry",
-        "options": ["54 cm²", "108 cm²", "72 cm²", "36 cm²"],
-        "answer": "54 cm²",
-        "solution": "Area = 1/2 * base * height = 1/2 * 12 * 9 = 54 cm²."
+        "problem": "What is the probability of drawing a heart or a diamond from a deck of 52 cards?",
+        "type": "Probability",
+        "options": ["1/2", "1/4", "1/3", "2/3"],
+        "answer": "1/2",
+        "solution": "There are 13 hearts and 13 diamonds, giving 26 favorable outcomes out of 52. The probability is 26/52 = 1/2."
     },
     {
-        "problem": "What is the surface area of a sphere with a radius of 4 cm?",
-        "type": "Geometry",
-        "options": ["64π cm²", "48π cm²", "16π cm²", "32π cm²"],
-        "answer": "64π cm²",
-        "solution": "Surface area = 4πr² = 4π * 4² = 64π cm²."
+        "problem": "How many ways can you choose a committee of 2 men and 3 women from a group of 5 men and 6 women?",
+        "type": "Counting",
+        "options": ["200", "150", "100", "120"],
+        "answer": "100",
+        "solution": "The number of ways is given by 5C2 × 6C3 = 10 × 20 = 100."
     },
     {
-        "problem": "How many vertices does a rectangular prism have?",
-        "type": "Geometry",
-        "options": ["8", "6", "12", "10"],
-        "answer": "8",
-        "solution": "A rectangular prism has 8 vertices."
+        "problem": "What is the probability of not drawing a King from a standard deck of 52 cards?",
+        "type": "Probability",
+        "options": ["12/13", "11/13", "3/4", "1/4"],
+        "answer": "12/13",
+        "solution": "There are 4 Kings in the deck, so the probability of not drawing a King is 48/52 = 12/13."
     },
     {
-        "problem": "What is the measure of each interior angle of a regular octagon?",
-        "type": "Geometry",
-        "options": ["135°", "120°", "150°", "108°"],
-        "answer": "135°",
-        "solution": "Each interior angle of a regular octagon is calculated as (n-2) * 180° / n = (8-2) * 180 / 8 = 135°."
+        "problem": "In how many ways can you distribute 4 different colored balls into 2 different boxes?",
+        "type": "Counting",
+        "options": ["16", "8", "12", "10"],
+        "answer": "16",
+        "solution": "Each ball can go into one of two boxes, so the total number of ways is 2^4 = 16."
     },
     {
-        "problem": "What is the total surface area of a cylinder with a radius of 2 cm and a height of 7 cm?",
-        "type": "Geometry",
-        "options": ["36π cm²", "72π cm²", "28π cm²", "52π cm²"],
-        "answer": "36π cm²",
-        "solution": "Total surface area = 2πr(h + r) = 2π * 2 * (7 + 2) = 36π cm²."
+        "problem": "What is the probability of getting at least one head when flipping two coins?",
+        "type": "Probability",
+        "options": ["3/4", "1/2", "1/4", "2/3"],
+        "answer": "3/4",
+        "solution": "The outcomes with at least one head are HH, HT, and TH. Thus, 3 out of 4 outcomes are favorable, giving a probability of 3/4."
     },
     {
-        "problem": "What is the volume of a cone with a radius of 3 cm and height of 4 cm?",
-        "type": "Geometry",
-        "options": ["12π cm³", "36π cm³", "24π cm³", "48π cm³"],
-        "answer": "12π cm³",
-        "solution": "Volume = (1/3)πr²h = (1/3)π * 3² * 4 = 12π cm³."
+        "problem": "How many ways can you arrange 5 people in a line?",
+        "type": "Counting",
+        "options": ["120", "60", "24", "10"],
+        "answer": "120",
+        "solution": "The number of arrangements is 5! = 5 × 4 × 3 × 2 × 1 = 120."
     },
     {
-        "problem": "What is the length of a side of an equilateral triangle with a perimeter of 18 cm?",
-        "type": "Geometry",
-        "options": ["3 cm", "6 cm", "9 cm", "12 cm"],
-        "answer": "6 cm",
-        "solution": "Side length = Perimeter / 3 = 18 / 3 = 6 cm."
+        "problem": "What is the probability of rolling a number less than 3 on a six-sided die?",
+        "type": "Probability",
+        "options": ["1/3", "1/2", "1/6", "2/3"],
+        "answer": "1/3",
+        "solution": "The favorable outcomes are 1 and 2, giving 2 favorable outcomes out of 6. Thus, the probability is 2/6 = 1/3."
     },
     {
-        "problem": "What is the area of a kite with diagonals of 8 cm and 5 cm?",
-        "type": "Geometry",
-        "options": ["20 cm²", "40 cm²", "30 cm²", "25 cm²"],
-        "answer": "20 cm²",
-        "solution": "Area = 1/2 * d1 * d2 = 1/2 * 8 * 5 = 20 cm²."
+        "problem": "How many different ways can you form a 4-letter word from the letters A, B, C, and D without repeating letters?",
+        "type": "Counting",
+        "options": ["24", "12", "16", "32"],
+        "answer": "24",
+        "solution": "The number of ways is 4! = 4 × 3 × 2 × 1 = 24."
     },
     {
-        "problem": "How many faces does a triangular prism have?",
-        "type": "Geometry",
-        "options": ["5", "6", "7", "8"],
-        "answer": "5",
-        "solution": "A triangular prism has 5 faces: 2 triangular and 3 rectangular."
+        "problem": "What is the probability of drawing a spade from a deck of 52 cards?",
+        "type": "Probability",
+        "options": ["1/4", "1/3", "1/2", "2/3"],
+        "answer": "1/4",
+        "solution": "There are 13 spades in a deck, so the probability is 13/52 = 1/4."
     },
     {
-        "problem": "What is the circumference of a circle with a diameter of 10 cm?",
-        "type": "Geometry",
-        "options": ["31.4 cm", "15.7 cm", "20 cm", "25.2 cm"],
-        "answer": "31.4 cm",
-        "solution": "Circumference = π * diameter ≈ 3.14 * 10 = 31.4 cm."
+        "problem": "How many ways can you select a group of 3 out of 6 items if the order matters?",
+        "type": "Counting",
+        "options": ["120", "60", "20", "40"],
+        "answer": "120",
+        "solution": "Since the order matters, we use permutations: 6P3 = 6!/(6-3)! = 120."
     },
     {
-        "problem": "What is the measure of each exterior angle of a regular decagon?",
-        "type": "Geometry",
-        "options": ["36°", "45°", "30°", "60°"],
-        "answer": "36°",
-        "solution": "Exterior angle = 360°/n = 360°/10 = 36°."
+        "problem": "What is the probability of drawing a red face card from a standard deck of 52 cards?",
+        "type": "Probability",
+        "options": ["3/26", "1/13", "2/13", "1/26"],
+        "answer": "3/26",
+        "solution": "There are 6 red face cards in a deck, so the probability is 6/52 = 3/26."
     },
     {
-        "problem": "What is the length of the diagonal of a rectangular prism with dimensions 3 cm, 4 cm, and 5 cm?",
-        "type": "Geometry",
-        "options": ["7 cm", "6 cm", "8 cm", "9 cm"],
-        "answer": "7 cm",
-        "solution": "Diagonal length = √(3² + 4² + 5²) = √50 ≈ 7 cm."
+        "problem": "How many ways can you assign 3 tasks to 4 different workers if each task must be assigned to a different worker?",
+        "type": "Counting",
+        "options": ["24", "12", "18", "30"],
+        "answer": "24",
+        "solution": "The number of ways is given by permutations: 4P3 = 4!/(4-3)! = 24."
     },
     {
-        "problem": "What is the volume of a triangular prism with a base area of 6 cm² and height of 10 cm?",
-        "type": "Geometry",
-        "options": ["30 cm³", "60 cm³", "50 cm³", "40 cm³"],
-        "answer": "60 cm³",
-        "solution": "Volume = base area * height = 6 * 10 = 60 cm³."
+        "problem": "What is the probability of rolling two six-sided dice and getting a sum of 10?",
+        "type": "Probability",
+        "options": ["1/12", "1/9", "1/8", "3/36"],
+        "answer": "1/12",
+        "solution": "The outcomes that sum to 10 are (4,6), (5,5), and (6,4), giving 3 favorable outcomes. The probability is 3/36 = 1/12."
     },
     {
-        "problem": "How many diagonals does a pentagon have?",
-        "type": "Geometry",
-        "options": ["5", "10", "7", "8"],
-        "answer": "5",
-        "solution": "The formula for the number of diagonals in a polygon is n(n-3)/2, where n = number of sides. For a pentagon, 5(5-3)/2 = 5."
+        "problem": "How many ways can you arrange the letters in the word 'MANGO'?",
+        "type": "Counting",
+        "options": ["60", "120", "240", "360"],
+        "answer": "120",
+        "solution": "Since all letters are unique, the number of arrangements is 5! = 120."
     },
     {
-        "problem": "What is the area of a square with a diagonal of 6 cm?",
-        "type": "Geometry",
-        "options": ["18 cm²", "36 cm²", "9 cm²", "12 cm²"],
-        "answer": "18 cm²",
-        "solution": "Area = (diagonal²)/2 = (6²)/2 = 18 cm²."
+        "problem": "What is the probability of drawing a club from a deck of 52 cards?",
+        "type": "Probability",
+        "options": ["1/4", "1/3", "1/2", "2/3"],
+        "answer": "1/4",
+        "solution": "There are 13 clubs in a deck, so the probability is 13/52 = 1/4."
     },
     {
-        "problem": "What is the length of the hypotenuse of a right triangle with legs of 5 cm and 12 cm?",
-        "type": "Geometry",
-        "options": ["12 cm", "10 cm", "13 cm", "15 cm"],
-        "answer": "13 cm",
-        "solution": "Hypotenuse = √(5² + 12²) = √169 = 13 cm."
+        "problem": "How many ways can you form a 3-digit code using digits 0-9 if repetition is allowed?",
+        "type": "Counting",
+        "options": ["1000", "720", "900", "500"],
+        "answer": "1000",
+        "solution": "Each digit has 10 possibilities, so there are 10 × 10 × 10 = 1000 ways."
     },
     {
-        "problem": "What is the volume of a rectangular prism with dimensions 2 cm, 3 cm, and 4 cm?",
-        "type": "Geometry",
-        "options": ["24 cm³", "12 cm³", "36 cm³", "18 cm³"],
-        "answer": "24 cm³",
-        "solution": "Volume = length * width * height = 2 * 3 * 4 = 24 cm³."
+        "problem": "What is the probability of drawing a card that is either a 7 or an 8 from a deck of 52 cards?",
+        "type": "Probability",
+        "options": ["2/13", "1/13", "3/26", "1/4"],
+        "answer": "2/13",
+        "solution": "There are 4 cards that are 7s and 4 that are 8s, totaling 8 favorable outcomes. The probability is 8/52 = 2/13."
     },
     {
-        "problem": "What is the surface area of a cone with a radius of 3 cm and a slant height of 5 cm?",
-        "type": "Geometry",
-        "options": ["15π cm²", "30π cm²", "24π cm²", "12π cm²"],
-        "answer": "24π cm²",
-        "solution": "Surface area = πr(l + r) = π * 3 * (5 + 3) = 24π cm²."
+        "problem": "How many ways can you form a committee of 4 people from a group of 10?",
+        "type": "Counting",
+        "options": ["210", "100", "120", "240"],
+        "answer": "210",
+        "solution": "The number of ways to choose 4 from 10 is given by 10C4 = 210."
     },
     {
-        "problem": "What is the measure of the angles in a regular polygon with 12 sides?",
-        "type": "Geometry",
-        "options": ["150°", "120°", "135°", "160°"],
-        "answer": "150°",
-        "solution": "Each interior angle = (n-2) * 180° / n = (12-2) * 180 / 12 = 150°."
+        "problem": "What is the probability of flipping three coins and getting all tails?",
+        "type": "Probability",
+        "options": ["1/8", "1/4", "3/8", "1/2"],
+        "answer": "1/8",
+        "solution": "The probability of getting tails on each flip is 1/2, so the probability of all tails is (1/2)^3 = 1/8."
+    },
+    {
+        "problem": "How many ways can you arrange the letters in the word 'PEPPER'?",
+        "type": "Counting",
+        "options": ["180", "360", "720", "2520"],
+        "answer": "180",
+        "solution": "The word 'PEPPER' has 6 letters with the letter 'P' repeated 3 times and 'E' repeated 2 times. The number of arrangements is 6!/(3!2!) = 720/12 = 180."
+    },
+    {
+        "problem": "What is the probability of drawing a Queen from a deck of 52 cards?",
+        "type": "Probability",
+        "options": ["1/13", "1/26", "1/52", "2/13"],
+        "answer": "1/13",
+        "solution": "There are 4 Queens in the deck, so the probability is 4/52 = 1/13."
+    },
+    {
+        "problem": "What is the probability of drawing an Ace or a King from a standard deck of 52 cards?",
+        "type": "Probability",
+        "options": ["2/13", "1/13", "3/26", "1/26"],
+        "answer": "2/13",
+        "solution": "There are 4 Aces and 4 Kings in the deck, totaling 8 favorable outcomes. The probability is 8/52 = 2/13."
+    },
+    {
+        "problem": "How many ways can you choose a president and a vice president from a group of 7 people?",
+        "type": "Counting",
+        "options": ["42", "49", "21", "56"],
+        "answer": "42",
+        "solution": "The number of ways is given by permutations: 7P2 = 7 × 6 = 42."
+    },
+    {
+        "problem": "What is the probability of rolling an even number on a six-sided die?",
+        "type": "Probability",
+        "options": ["1/2", "1/3", "2/3", "1/6"],
+        "answer": "1/2",
+        "solution": "The even numbers on a six-sided die are 2, 4, and 6. There are 3 favorable outcomes out of 6 total, so the probability is 3/6 = 1/2."
     }
 ]
