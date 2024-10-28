@@ -70,7 +70,59 @@ def handle_login():
         return redirect(f"/quiz/{username}")
     return "Login failed! Invalid username or password."
 
-{Gift}
+# Load dataset from a local JSON file
+def fetch_local_dataset():
+    try:
+        with open("local_dataset.json", "r") as file:
+            data = json.load(file)
+            print("Fetched data from local dataset:", data)  # Debugging line
+            return data.get("rows", [])
+    except FileNotFoundError:
+        print("Dataset file not found!")
+        return []
+
+
+# Process dataset and extract questions, choices, answers, and categories
+def process_dataset(rows):
+    questions_data = []
+    for row in rows:
+        question_data = row.get("row", {})
+
+        question = question_data.get("question", "No question available")
+        choices = question_data.get("choices", [])
+        answer = question_data.get("answer", "No answer available")
+        category = question_data.get("category", "Uncategorized").capitalize()  # Capitalize categories
+
+        if question and choices and answer:
+            questions_data.append({
+                "question": question,
+                "choices": choices,
+                "answer": answer,
+                "category": category  # Ensure categories are consistent
+            })
+
+    print("Processed Questions:", questions_data)  # Debugging line
+    return questions_data
+
+
+# Add the dataset questions to the student's quiz pool
+def add_dataset_questions_to_student(student_name, questions_data):
+    data = load_data()
+    if student_name not in data:
+        return "Student not found."
+
+    if 'mcqs' not in data[student_name]:
+        data[student_name]['mcqs'] = []
+
+    for question_data in questions_data:
+        data[student_name]['mcqs'].append({
+            "question": question_data["question"],
+            "choices": question_data["choices"],
+            "correct": question_data["answer"],
+            "category": question_data["category"]
+        })
+
+    save_data(data)
 
 
 @app.route('/quiz/<username>')
