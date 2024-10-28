@@ -51,7 +51,47 @@ def load_student_data():
     return pd.DataFrame(records)
 
 
-{Milie}
+# Train Linear Regression Model
+def train_model():
+    global model
+    df = load_student_data()
+
+    # Prepare features and target variable
+    X = df[['total_attempts', 'wrong_answers']]  # Features
+    y = df['score']  # Target variable
+
+    # Split the data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    # Create and train the model
+    model = LinearRegression()
+    model.fit(X_train, y_train)
+    
+      # Make predictions
+    predictions = model.predict(X_test)
+
+    # Evaluate the model
+    mse = mean_squared_error(y_test, predictions)
+    print(f'Mean Squared Error: {mse}')
+
+
+# Predict future score based on previous performance
+def predict_future_score(username):
+    data = load_data()
+    if username not in data:
+        return None
+
+    total_attempts = len(data[username]['quiz_scores'])
+    wrong_answers = len(data[username].get('wrong_answers', []))
+
+ # Make a prediction using the model
+    if model:
+        predicted_score = model.predict(np.array([[total_attempts, wrong_answers]]))
+        return round(predicted_score[0])  # Round the predicted score to the nearest whole number
+    return None
+
+
+
 
 
 @app.route('/static/<filename>')
