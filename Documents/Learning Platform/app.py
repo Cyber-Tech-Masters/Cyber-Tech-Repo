@@ -14,7 +14,41 @@ app = Bottle()
 model = None
 
 
-{Liya}
+# Load or create dataset.json to store student data
+def load_data():
+    try:
+        with open("dataset.json", "r") as file:
+            if file.readable():
+                file.seek(0)
+                content = file.read().strip()
+                if not content:
+                    return {}
+                return json.loads(content)
+            else:
+                return {}
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def save_data(data):
+    with open("dataset.json", "w") as file:
+        json.dump(data, file)
+
+# Load student data from dataset.json
+def load_student_data():
+    data = load_data()
+    records = []
+
+    for username, details in data.items():
+        for score in details['quiz_scores']:
+            records.append({
+                'username': username,
+                'score': score,
+                'total_attempts': len(details['quiz_scores']),  # Number of attempts
+                'wrong_answers': len(details.get('wrong_answers', [])),  # Default to empty list if missing
+            })
+
+    return pd.DataFrame(records)
 
 
 {Milie}
